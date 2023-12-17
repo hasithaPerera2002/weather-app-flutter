@@ -1,5 +1,7 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:clima/utilities/constants.dart';
+import 'package:weather/utilities/constants.dart';
 
 class LocationScreen extends StatefulWidget {
   @override
@@ -28,14 +30,14 @@ class _LocationScreenState extends State<LocationScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  FlatButton(
+                  MaterialButton(
                     onPressed: () {},
                     child: Icon(
                       Icons.near_me,
                       size: 50.0,
                     ),
                   ),
-                  FlatButton(
+                  MaterialButton(
                     onPressed: () {},
                     child: Icon(
                       Icons.location_city,
