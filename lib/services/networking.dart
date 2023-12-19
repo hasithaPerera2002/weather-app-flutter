@@ -10,8 +10,8 @@ class NetworkHelper {
   NetworkHelper({required this.uri});
 
   // ignore: empty_constructor_bodies
-  Future getData() async {
-    String uri = 'YOUR_API_ENDPOINT_HERE'; // Replace with your API endpoint
+  Future<dynamic> getData() async {
+    // Replace with your API endpoint
 
     print('Fetching data...');
     try {

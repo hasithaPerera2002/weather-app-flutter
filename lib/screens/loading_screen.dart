@@ -51,12 +51,14 @@ class _LoadingScreenState extends State<LoadingScreen> {
     NetworkHelper networkHelper = NetworkHelper(
         uri:
             'https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&appid=$API_KEY');
-    networkHelper.getData();
+    var weatherData = networkHelper.getData();
     Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) {
-          return LocationScreen();
+          return LocationScreen(
+            locationWeather: weatherData,
+          );
         },
       ),
     );
@@ -66,9 +68,12 @@ class _LoadingScreenState extends State<LoadingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: SpinKitDoubleBounce(
-          color: Colors.white,
-          size: 100,
+        // child: SpinKitDoubleBounce(
+        //   color: Colors.white,
+        //   size: 100,
+        child: MaterialButton(
+          onPressed: () {},
+          child: Text('hii'),
         ),
       ),
     );
